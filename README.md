@@ -15,7 +15,12 @@ A comprehensive development container template for UAV controls and robotics res
 
 - Docker
 - Visual Studio Code with Dev Containers extension
-- X11 forwarding support (for GUI applications)
+- X11 forwarding support (for GUI applications on Linux) or WSL2 (for Windows)
+
+**Platform-specific installation guides:**
+
+- [Linux Installation Guide](docs/linux-install.md)
+- [Windows Installation Guide](docs/windows-install.md)
 
 ## Quick Start
 
