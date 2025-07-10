@@ -1,4 +1,9 @@
-# ROS2 PX4 Startup Template
+# ROS 2-PX4 Startup Template
+
+[![ROS 2 Jazzy](https://img.shields.io/badge/ROS%202-Jazzy-blue?logo=ros&logoColor=white)](https://docs.ros.org/en/jazzy/)
+[![Dev Container Ready](https://img.shields.io/badge/Dev%20Container-Ready-green?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/docs/devcontainers/containers)
+[![PX4 Compatible](https://img.shields.io/badge/PX4-Compatible-orange?logo=px4&logoColor=white)](https://docs.px4.io/)
+[![Documentation](https://img.shields.io/badge/docs-available-brightgreen)](docs/)
 
 A comprehensive development container template for UAV controls and robotics research featuring ROS 2 Jazzy, PX4 SITL simulation, and pre-configured development tools.
 
