@@ -24,11 +24,19 @@ A comprehensive development container template for UAV controls and robotics res
 
 ## Quick Start
 
-1. Clone this repository:
+![Use this repo as a template](docs/media/template.png)
+
+1. Use this repository as a template to create your own project:
 
    ```bash
-   git clone <repository-url>
-   cd ros2_px4_startup
+   # Option 1: Use GitHub's template feature (recommended)
+   # Click "Use this template" button on GitHub, or
+
+   # Option 2: Clone and start fresh
+   git clone <repository-url> my-uav-project
+   cd my-uav-project
+   rm -rf .git
+   git init
    ```
 
 2. Open in VS Code:
@@ -133,6 +141,8 @@ Customize the development environment by modifying the `customizations` section 
 
 ## Troubleshooting
 
+For comprehensive troubleshooting and detailed configuration options, please refer to the official documentation links in the [References](#references) section below.
+
 ### Display Issues
 
 If GUI applications don't work:
@@ -160,13 +170,28 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test in the development container
-5. Submit a pull request
+This repository serves as a template for UAV development projects. To contribute:
+
+1. **Using as a Template**: Use GitHub's "Use this template" feature to create your own UAV project
+2. **Contributing to the Template**:
+   - Fork this repository
+   - Create a feature branch
+   - Make your changes to improve the template
+   - Test in the development container
+   - Submit a pull request
+
+When contributing improvements to the template itself, ensure your changes benefit the general UAV development workflow and maintain compatibility across different projects.
 
 ## Acknowledgments
 
 - [PX4 Autopilot](https://github.com/PX4/PX4-Autopilot) team
-- [ROS 2](https://ros.org/)
+- [ROS 2](https://ros.org/) community
+- [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) documentation
+
+## References
+
+- **ROS 2 Documentation**: [docs.ros.org](https://docs.ros.org/) or directly [docs.ros.org/en/jazzy/](https://docs.ros.org/en/jazzy/)
+- **PX4 User Guide**: [docs.px4.io](https://docs.px4.io/)
+- **PX4-ROS 2 Integration**: [docs.px4.io/main/en/ros/ros2_comm](https://docs.px4.io/main/en/ros/ros2_comm.html)
+- **VS Code Dev Containers**: [code.visualstudio.com/docs/devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
+- **Micro-XRCE-DDS**: [micro-xrce-dds.docs.eprosima.com](https://micro-xrce-dds.docs.eprosima.com/)
