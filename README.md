@@ -58,7 +58,7 @@ A comprehensive development container template for UAV controls and robotics res
 
 ### Software Stack
 
-- **Base**: Ubuntu with ROS 2 Jazzy
+- **Base**: Ubuntu 24.04 with ROS 2 Jazzy
 - **PX4 Autopilot**: Cloned from main branch with all dependencies
 - **Micro-XRCE-DDS Agent**: Built and installed for PX4-ROS 2 communication
 - **Gazebo**: ROS-Gazebo bridge for realistic simulation
@@ -169,9 +169,21 @@ sudo chown -R ros:ros /workspaces/uav_control
 
 Ensure you have enough disk space and memory. PX4 compilation requires significant resources.
 
+## Planned Features
+
+### ARM-based Device Support
+
+Support for ARM-based devices is planned, including:
+
+- Raspberry Pi (ARM64)
+- NVIDIA Jetson devices (ARM64)
+- Apple Silicon devices (M series)
+
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+This project is developed by the [Stream Robotics group](https://sites.google.com/view/streamrobotics-polito/home) of Politecnico di Torino, Italy.
 
 ## Contributing
 
