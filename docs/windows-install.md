@@ -26,7 +26,18 @@ This guide will help you set up the ROS2 PX4 development environment on Windows 
    wsl --update
    ```
 
-## Step 2: Install Docker Desktop
+## Step 2: Install Visual Studio Code
+
+1. Download VS Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+2. Install with default settings.
+
+3. Install the following extensions:
+   - **Remote - WSL**
+   - **Dev Containers**
+   - **Docker**
+
+## Step 3: Install Docker Desktop
 
 ### Option A: Traditional Installation
 
@@ -41,12 +52,12 @@ This guide will help you set up the ROS2 PX4 development environment on Windows 
 5. Launch Docker Desktop and complete the initial setup.
 
 6. In Docker Desktop settings:
-    - Go to **General** → Enable "Use the WSL 2 based engine"
-    - Go to **Resources** → **WSL Integration** → Enable integration with your Ubuntu distribution
+   - Go to **General** → Enable "Use the WSL 2 based engine"
+   - Go to **Resources** → **WSL Integration** → Enable integration with your Ubuntu distribution
 
 ### Option B: Install via VS Code Dev Containers Extension (Easier)
 
-1. Open VS Code and install the **Dev Containers** extension from the Extensions marketplace.
+1. Open VS Code and install the **Dev Containers** extension from the Extensions marketplace (if not already installed from Step 2).
 
 2. When you first try to use a dev container (Step 5), VS Code will prompt you to install Docker Desktop if it's not detected.
 
@@ -58,20 +69,16 @@ This guide will help you set up the ROS2 PX4 development environment on Windows 
 
 **Note**: Option B is more streamlined and should be easier for most users, while Option A gives you more control over the installation process.
 
-## Step 3: Install Visual Studio Code
-
-1. Download VS Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
-
-2. Install with default settings.
-
-3. Install the following extensions:
-   - **Remote - WSL**
-   - **Dev Containers**
-   - **Docker**
-
 ## Step 4: Set Up X11 Forwarding (for GUI applications)
 
-### Option A: Using VcXsrv (Recommended)
+### Option A: Using WSLg (Recommended for Windows 11)
+
+> **ℹ️ Note**:
+>
+> - **Windows 11**: WSLg is included and provides native GUI support. GUI forwarding is automatically handled by WSLg and no additional X11 configuration is required.
+> - **Windows 10**: Check if WSLg is available on your system by running `wsl --version` in PowerShell. If WSLg is available, no additional setup is needed. Otherwise, use Option B below.
+
+### Option B: Using VcXsrv (Required for Windows 10 without WSLg)
 
 1. Download and install VcXsrv from [https://sourceforge.net/projects/vcxsrv/](https://sourceforge.net/projects/vcxsrv/)
 
@@ -86,10 +93,6 @@ This guide will help you set up the ROS2 PX4 development environment on Windows 
    export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
    export LIBGL_ALWAYS_INDIRECT=1
    ```
-
-### Option B: Using WSLg (Windows 11 only)
-
-If you're on Windows 11, WSLg is included and provides native GUI support. No additional setup required.
 
 ## Step 5: Clone and Run the Project
 

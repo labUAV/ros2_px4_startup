@@ -150,12 +150,18 @@ For comprehensive troubleshooting and detailed configuration options, please ref
 
 ### Display Issues
 
-If GUI applications don't work:
+If GUI applications don't work on Linux:
 
 ```bash
 echo $DISPLAY
 xhost +local:docker  # On host system
 ```
+
+> **ℹ️ Note for Windows users**:
+>
+> - **Windows 11**: GUI forwarding is automatically handled by WSLg and no additional configuration is required.
+>
+> - **Windows 10**: Check if WSLg is available on your system, otherwise follow the X11 setup in the [Windows Installation Guide](docs/windows-install.md).
 
 ### Permission Issues
 
