@@ -4,7 +4,7 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
-    "workspaceFolder": "/workspaces/uav_control",
+    "workspaceFolder": "/workspaces/ros2_px4_startup",
     "remoteUser": "ros",
     "runArgs": [
         "--net=host",
@@ -31,7 +31,6 @@
                 "betwo.b2-catkin-tools",
                 "DotJoshJohnson.xml",
                 "ms-azuretools.vscode-docker",
-                "ms-iot.vscode-ros",
                 "ms-python.python",
                 "ms-vscode.cpptools",
                 "redhat.vscode-yaml",
@@ -44,12 +43,14 @@
                 "charliermarsh.ruff",
                 "hyperoot.settings-organizer",
                 "Gruntfuggly.todo-tree",
-                "johnpapa.vscode-peacock"
+                "johnpapa.vscode-peacock",
+                "Ranch-Hand-Robotics.rde-ros-2"
             ],
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "python.defaultInterpreterPath": "/usr/bin/python3"
             }
         }
-    }
+    },
+    "postCreateCommand": "chmod +x /workspaces/ros2_px4_startup/scripts/clone_repos.sh && /workspaces/ros2_px4_startup/scripts/clone_repos.sh"
 }

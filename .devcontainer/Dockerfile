@@ -27,14 +27,11 @@ RUN git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git && \
     cmake .. && make && make install && ldconfig && \
     cd /workspaces && rm -rf Micro-XRCE-DDS-Agent
 
-RUN mkdir -p /workspaces/uav_control
-COPY ./src /workspaces/uav_control/src
-
 RUN chown -R ros:ros /workspaces
 
 USER ros
 
 RUN echo "\nsource /opt/ros/jazzy/setup.bash" >> /home/ros/.bashrc && \
-    echo "if [ -f /workspaces/uav_control/install/setup.bash ]; then source /workspaces/uav_control/install/setup.bash; fi" >> /home/ros/.bashrc
+    echo "if [ -f /workspaces/ros2_px4_template/install/setup.bash ]; then source /workspaces/ros2_px4_template/install/setup.bash; fi" >> /home/ros/.bashrc
 
 CMD ["/bin/bash"]
