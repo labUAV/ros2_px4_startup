@@ -112,6 +112,8 @@ This guide will help you set up the ROS2 PX4 development environment on Windows 
 
 3. When prompted, click "Reopen in Container" or use `Ctrl+Shift+P` → "Dev Containers: Reopen in Container"
 
+> **⏳ Note**: The first time you open the project in a dev container, the setup will take some time (typically ~30 minutes on a fast system, possibly longer on others). This is because the container is building and installing ROS 2, Gazebo, and PX4. Subsequent starts will be much faster.
+
 ## Troubleshooting
 
 ### Docker Issues
